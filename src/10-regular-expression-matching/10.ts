@@ -28,9 +28,12 @@ export const isMatch = (s: string, p: string): boolean => {
         dp[i][j] =
           dp[i][j - 2] || // 0번 반복
           ((s[i - 1] === p[j - 2] || p[j - 2] === ".") && dp[i - 1][j]); // 1번 이상 반복
+        // && dp[i -1][j] 부분이 필요 없어 보일수도 있지만 mississipi같은 case에서 필요하다
       }
     }
   }
 
   return dp[m][n];
 };
+
+console.log(isMatch("aab", "a*b"));
