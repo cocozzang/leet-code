@@ -1,6 +1,6 @@
 import { intToRoman } from "./12";
 
-describe("Q11", () => {
+describe("Q12", () => {
   it("case test", () => {
     const inputs = [3749, 58, 1994];
     const outputs: string[] = [];
